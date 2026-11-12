@@ -1,0 +1,123 @@
+{
+  "dataset_name": "DATASET(1).csv",
+  "crop": "Sugarcane",
+  "target": "yield_quintal_per_acre",
+  "target_unit": "quintal/acre",
+  "total_rows": 120,
+  "total_columns": 12,
+  "train_rows": 96,
+  "test_rows": 24,
+  "numeric_features": [
+    "rainfall_mm",
+    "avg_temperature_celsius",
+    "sunlight_hours_per_day",
+    "nitrogen_n_kg_per_acre",
+    "phosphorus_p_kg_per_acre",
+    "potassium_k_kg_per_acre",
+    "crop_duration_days",
+    "irrigation_frequency_per_month",
+    "pest_control_applied"
+  ],
+  "categorical_features": [
+    "soil_type",
+    "seed_variety"
+  ],
+  "soil_types": [
+    "Alluvial",
+    "Red Soil",
+    "Clay Loam",
+    "Sandy Loam"
+  ],
+  "seed_varieties": [
+    "Co86032",
+    "Co0238",
+    "CoM0265"
+  ],
+  "evaluations": {
+    "Linear Regression": {
+      "mae": 11.313,
+      "mse": 282.836,
+      "rmse": 16.818,
+      "r2": 0.9754
+    },
+    "Decision Tree": {
+      "mae": 1.867,
+      "mse": 6.124,
+      "rmse": 2.475,
+      "r2": 0.9995
+    },
+    "Random Forest": {
+      "mae": 3.196,
+      "mse": 18.172,
+      "rmse": 4.263,
+      "r2": 0.9984
+    },
+    "Support Vector Regressor (SVR)": {
+      "mae": 1.582,
+      "mse": 3.913,
+      "rmse": 1.978,
+      "r2": 0.9997
+    },
+    "Voting Regressor": {
+      "mae": 2.122,
+      "mse": 7.771,
+      "rmse": 2.788,
+      "r2": 0.9993
+    }
+  },
+  "best_model": "Support Vector Regressor (SVR)",
+  "voting_weights": {
+    "SVR": 0.45,
+    "Decision Tree": 0.25,
+    "Random Forest": 0.2,
+    "Linear Regression": 0.1
+  },
+  "feature_importances": [
+    {
+      "feature": "Nitrogen (N)",
+      "importance": 0.199
+    },
+    {
+      "feature": "Crop Duration",
+      "importance": 0.1846
+    },
+    {
+      "feature": "Phosphorus (P)",
+      "importance": 0.158
+    },
+    {
+      "feature": "Potassium (K)",
+      "importance": 0.137
+    },
+    {
+      "feature": "Pest Control",
+      "importance": 0.1336
+    },
+    {
+      "feature": "Rainfall",
+      "importance": 0.0687
+    },
+    {
+      "feature": "Avg Temperature",
+      "importance": 0.0675
+    },
+    {
+      "feature": "Sunlight Hours",
+      "importance": 0.0289
+    },
+    {
+      "feature": "Seed Variety",
+      "importance": 0.014
+    },
+    {
+      "feature": "Soil Type",
+      "importance": 0.0062
+    },
+    {
+      "feature": "Irrigation Frequency",
+      "importance": 0.0025
+    }
+  ],
+  "training_timestamp": "2026-09-27T18:24:48.770163",
+  "random_state": 42
+}

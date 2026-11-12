@@ -1,0 +1,105 @@
+/* YieldVision Theme & Animations */
+
+@keyframes fadeRise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fadeRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-rise-delay {
+  animation: fadeRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fadeRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.animate-fade-rise-delay-3 {
+  animation: fadeRise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Glassmorphism Classes */
+.glass-editorial {
+  background: rgba(255, 255, 255, 0.60);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 40px rgba(7, 59, 42, 0.08);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.glass-card-subtle {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgba(7, 59, 42, 0.06);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.40);
+}
+
+/* Parallax subtle floating */
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-subtle {
+  animation: floatSubtle 6s ease-in-out infinite;
+}
+
+@keyframes pulseIndicator {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.3;
+  }
+}
+
+.animate-scroll-indicator {
+  animation: pulseIndicator 2s ease-in-out infinite;
+}
+
+@keyframes heroPan {
+  0% {
+    transform: scale(1.03) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.00) translate3d(0, 0, 0);
+  }
+}
+
